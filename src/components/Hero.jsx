@@ -31,13 +31,7 @@ const Hero = () => {
   href="/Sharath(IT).pdf"
   target="_blank"
   className="border px-6 py-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition">
-  1.Resume
-</a>
-<a
-  href="/Sharathkumar R K UI_UX.pdf"
-  target="_blank"
-  className="border px-6 py-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition">
-  2.Resume
+  Resume
 </a>
       </div>
     </section>
