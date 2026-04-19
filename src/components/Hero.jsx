@@ -8,7 +8,10 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         className="text-4xl md:text-6xl font-bold"
       >
-        Hi, I'm <span className="text-blue-500">Sharathkumar R K 😎</span>
+        <img src="/src/assets/profile.jpg"
+   className="w-40 h-35 rounded-full mb-4 mx-auto md:mx-0"
+/>
+        Frontend Developer <span className="text-blue-500"> | React.js Specialist😎</span>
       </motion.h1>
 
       <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-xl">
