@@ -20,6 +20,7 @@ const projects = [
 const Projects = () => {
   return (
     <section id="projects" className="py-24 px-6 max-w-6xl mx-auto">
+
       <h2 className="text-3xl md:text-4xl font-bold text-center">
         Projects
       </h2>
@@ -28,8 +29,11 @@ const Projects = () => {
         {projects.map((p, i) => (
           <motion.div
             key={i}
-            whileHover={{ y: -8 }}
-            className="bg-gray-100 dark:bg-gray-900 p-6 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-md hover:shadow-xl transition-all duration-300"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: i * 0.1 }}
+            whileHover={{ scale: 1.03 }}
+            className="bg-gray-100 dark:bg-gray-900 p-6 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-md hover:shadow-2xl transition-all duration-300"
           >
             <h3 className="text-xl font-semibold">{p.title}</h3>
 
@@ -37,8 +41,8 @@ const Projects = () => {
               {p.desc}
             </p>
 
-            {/* 🔥 Tech Tags */}
-            <div className="mt-3 flex flex-wrap gap-2">
+            {/* 🏷️ Tech Stack */}
+            <div className="mt-4 flex flex-wrap gap-2">
               {p.tech.map((t, idx) => (
                 <span
                   key={idx}
@@ -50,14 +54,14 @@ const Projects = () => {
             </div>
 
             {/* 🔗 Buttons */}
-            <div className="mt-5 flex gap-4">
+            <div className="mt-6 flex gap-4">
               <a
                 href={p.live}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-blue-500 px-4 py-2 rounded-lg text-white hover:bg-blue-600 transition"
+                className="bg-blue-500 px-4 py-2 rounded-lg text-white hover:bg-blue-600 transition shadow hover:shadow-blue-500/40"
               >
-                Live Demo
+                🚀 Live
               </a>
 
               <a
@@ -66,9 +70,10 @@ const Projects = () => {
                 rel="noopener noreferrer"
                 className="border border-gray-400 dark:border-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition"
               >
-                GitHub Code
+                💻 Code
               </a>
             </div>
+
           </motion.div>
         ))}
       </div>
