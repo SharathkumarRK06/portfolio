@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import profile from "../assets/profile.jpg";
 
 const Hero = () => {
   return (
@@ -8,7 +9,7 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         className="text-4xl md:text-6xl font-bold"
       >
-        <img src="/src/assets/profile.jpg"
+        <img src="/profile.jpg"
    className="w-40 h-35 rounded-full mb-4 mx-auto md:mx-0"
 />
         Frontend Developer <span className="text-blue-500"> | React.js Specialist😎</span>
